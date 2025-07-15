@@ -23,6 +23,7 @@ builder.Services.AddHttpClient("PublicApiClient", client =>
 
 // Register your custom services (like IAuthService)
 builder.Services.AddScoped<Public.WEB.Services.Authentication.IAccountService, Public.WEB.Services.Authentication.AccountService>();
+builder.Services.AddScoped<Public.WEB.Services.User.IUserService, Public.WEB.Services.User.UserService>();
 
 var app = builder.Build();
 
